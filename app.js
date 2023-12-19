@@ -76,7 +76,7 @@ const mainBot1 = async () => {
         database: adapterDB,
     })
 
-    QRPortalWeb({name:BOTNAME})
+    QRPortalWeb({name:BOTNAME,port:3001})
 }
 
 
@@ -94,7 +94,7 @@ const mainBot2 = async () => {
         database: adapterDB,
     })
 
-    QRPortalWeb({name:BOTNAME})
+    QRPortalWeb({name:BOTNAME,port:3002})
 }
 
 mainBot1()
