@@ -62,13 +62,10 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
         [flowDocs, flowGracias, flowTuto, flowDiscord]
     )
 
-const mainBot1 = async () => {
-    const BOTNAME = 'bot-1'
+const main = async () => {
     const adapterDB = new JsonFileAdapter()
     const adapterFlow = createFlow([flowPrincipal])
-    const adapterProvider = createProvider(BaileysProvider,{
-        name:BOTNAME
-    })
+    const adapterProvider = createProvider(BaileysProvider)
 
     createBot({
         flow: adapterFlow,
@@ -76,26 +73,7 @@ const mainBot1 = async () => {
         database: adapterDB,
     })
 
-    QRPortalWeb({name:BOTNAME,port:3001})
+    QRPortalWeb()
 }
 
-
-const mainBot2 = async () => {
-    const BOTNAME = 'bot-2'
-    const adapterDB = new JsonFileAdapter()
-    const adapterFlow = createFlow([flowPrincipal])
-    const adapterProvider = createProvider(BaileysProvider,{
-        name:BOTNAME
-    })
-
-    createBot({
-        flow: adapterFlow,
-        provider: adapterProvider,
-        database: adapterDB,
-    })
-
-    QRPortalWeb({name:BOTNAME,port:3002})
-}
-
-mainBot1()
-mainBot2()
+main()
