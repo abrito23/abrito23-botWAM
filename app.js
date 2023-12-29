@@ -154,7 +154,7 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
             database: adapterDB,
         })
     
-        QRPortalWeb({name:BOTNAME})
+        QRPortalWeb({name:BOTNAME,port: new()})
     }
 
     main()
