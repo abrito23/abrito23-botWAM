@@ -74,26 +74,34 @@ const flowCafes = addKeyword(['cafe', 'cafes','3']).addAnswer('☕ Cafes Gourmet
     [flowSecundario],{delay: 2000}
 )
 
-const flowPadecimientos = addKeyword(['otros', 'padecimientos','4']).addAnswer(
+const flowPadecimientos = addKeyword(['otros', 'padecimientos','4']).addAnswer('Maz Salud | Ayudando a Pacientes', {
+    media: 'https://mazsaludmx.com/img/pacientes.jpg'},{delay: 1000})
+
+    .addAnswer(
     [
-        '🙌 Aquí encontras un ejemplo rapido',
-        'https://bot-whatsapp.netlify.app/docs/example/',
-        '\n*2* Para siguiente paso.',
+        '🙌 Te mostramos algunos casos Impactantes!!!',
+        'Haz click aqui 👇👇👇',
+        'https://mazsaludmx.com/pacientes.php',
+        '\n*0* Para siguiente paso.',
     ],
     null,
     null,
-    [flowSecundario]
+    [flowSecundario],{delay: 2000}
 )
 
-const flowDiabetes = addKeyword(['2', 'diabetes', 'azucar','insulina']).addAnswer(
-    [
-        'Conoces personas que están buscando tener resultados e bajar de peso sin rebote???',
+const flowDiabetes = addKeyword(['2', 'diabetes', 'azucar','insulina']).addAnswer('Personas Revirtiendo el diabetes en menos de 6 meses', {
+    media: 'https://mazsaludmx.com/img/sindiabetes.jpg'},{delay: 1000})
 
-        '\n*2* Para siguiente paso.',
+    .addAnswer(
+    [
+        '🙌 Te mostramos como muchas personas, han dejado la Insulina, Metformina, y otros medicamentos que solo atrofian los organos!!!',
+        'Haz click aqui 👇👇👇',
+        'https://mazsaludmx.com/sindiabetes.php',
+        '\n*0* Para siguiente paso.',
     ],
     null,
     null,
-    [flowSecundario]
+    [flowSecundario],{delay: 2000}
 )
 
 const flowEscaneo = addKeyword(['escanear','escaneo','4']).addAnswer(
