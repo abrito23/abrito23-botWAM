@@ -140,24 +140,8 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
             database: adapterDB,
         })
     
-        QRPortalWeb({name:BOTNAME})
-    }
-    const main2 = async () => {
-        const PUERTO = (process.env.PORT || 3000) + 1;
-        
-        const BOTNAME = 'bot-2'
-        const adapterDB = new MockAdapter()
-        const adapterFlow = createFlow([flowPrincipal])
-        const adapterProvider = createProvider(BaileysProvider,{name:BOTNAME})
-    
-        createBot({
-            flow: adapterFlow,
-            provider: adapterProvider,
-            database: adapterDB,
-        })
-        
-        QRPortalWeb({name:BOTNAME,port: PUERTO})
+        QRPortalWeb({name:BOTNAME,port:4001})
     }
 
     main()
-    main2()
+   
