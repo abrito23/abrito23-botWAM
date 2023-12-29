@@ -130,7 +130,7 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
 
     const main = async () => {
         const BOTNAME = 'bot-1'
-        const port = process.env.PORT || 3000;
+        const PUERTO = process.env.PORT || 3000;
         const adapterDB = new MockAdapter()
         const adapterFlow = createFlow([flowPrincipal])
         const adapterProvider = createProvider(BaileysProvider,{name:BOTNAME})
@@ -140,18 +140,13 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
             provider: adapterProvider,
             database: adapterDB,
         })
-    
-        // Listen on `port` and 0.0.0.0
-        app.listen(port, "0.0.0.0", function () {
-          // ...
-            QRPortalWeb({name:BOTNAME})
-        });
-        
+            QRPortalWeb({name:BOTNAME,port:PUERTO})
+                
     }
 
     const main2 = async () => {
         const BOTNAME = 'bot-2'
-        const port = process.env.PORT || 3000;
+        const PUERTO = process.env.PORT || 3000;
         const adapterDB = new MockAdapter()
         const adapterFlow = createFlow([flowPrincipal])
         const adapterProvider = createProvider(BaileysProvider,{name:BOTNAME})
@@ -161,12 +156,9 @@ const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
             provider: adapterProvider,
             database: adapterDB,
         })
-    
-        // Listen on `port` and 0.0.0.0
-        app.listen(port, "0.0.0.0", function () {
-          // ...
-            QRPortalWeb({name:BOTNAME})
-        });
+
+            QRPortalWeb({name:BOTNAME,port:PUERTO})
+      
         
     }
     main()
